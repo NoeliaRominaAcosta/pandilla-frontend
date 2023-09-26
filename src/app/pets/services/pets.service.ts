@@ -5,11 +5,11 @@ import axios from 'axios';
 
 @Injectable({providedIn: 'root'})
 export class PetService {
-  private baseUrl: string = 'http://localhost:4200';
+  private baseUrl: string = 'http://localhost:8080/pet';
 
-  constructor(private httpClient: HttpClient) {}
+  constructor() {}
 
-  listPets(){
+  public listPets(){
     return axios.get(this.baseUrl).then(response =>{return response.data})
     .catch(
       error => console.log(error)
