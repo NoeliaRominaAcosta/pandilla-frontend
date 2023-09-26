@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'pets',
-    loadChildren: () => import('./pets/pandillamodule').then( m => m.PandillaModule ),
+    loadChildren: () => import('./pets/pandilla.module').then( m => m.PandillaModule ),
   },
   {
     path: '404',

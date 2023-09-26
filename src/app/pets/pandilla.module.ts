@@ -8,6 +8,7 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
 import { NewPageComponent } from './pages/new-page/new-page.component';
 import { PandillaPageComponent } from './pages/pandilla-page/pandilla-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -17,7 +18,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
     LayoutPageComponent,
     ListPageComponent,
     NewPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
