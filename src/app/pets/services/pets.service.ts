@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import axios from 'axios';
 
 @Injectable({providedIn: 'root'})
@@ -9,11 +9,8 @@ export class PetService {
 
   constructor() {}
 
-  public listPets(){
-    return axios.get(this.baseUrl).then(response =>{return response.data})
-    .catch(
-      error => console.log(error)
-      )
+  public listPets(): Observable<any[]> {
+    return from(axios.get(this.baseUrl).then(response => response.data));
   }
 
 }
