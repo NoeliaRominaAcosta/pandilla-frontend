@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PetService } from '../../services/pets.service';
+import { Pet } from '../../interfaces/Pet.interface';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-list-page',
@@ -8,10 +10,19 @@ import { PetService } from '../../services/pets.service';
   ]
 })
 export class ListPageComponent implements OnInit{
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+  public pets: Pet[]= [];
+  constructor(private petService : PetService){
+
   }
+  ngOnInit(): void {
+    this.petService.listPets()
+      .subscribe(pets => {
+        this.pets = pets;
+
+      });
 
 
+  }
   }
 

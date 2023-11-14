@@ -1,13 +1,36 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-subtitle>Nombre</mat-card-subtitle>
+<mat-card class="mx-3">
+  <mat-card-header class="text-center">
+    <!-- Aplicamos la clase text-center para centrar el contenido -->
+    <h2>{{ pet.name.toUpperCase() }}</h2>
   </mat-card-header>
-  <img
-    matCardImage
-    src="https://img.freepik.com/foto-gratis/adorable-perro-basenji-marron-blanco-sonriendo-dando-maximo-cinco-aislado-blanco_346278-1657.jpg?w=740&t=st=1695680119~exp=1695680719~hmac=3c190c1391242985d6020b55056cc6bf3b28ab5993e2e3e8dd05d0497e060aa3"
-  />
-  <mat-card-content> Text content </mat-card-content>
-  <mat-card-actions align="start">
-    <button mat-button color="primary">Action1</button>
+  <div class="image-container">
+    <img *ngIf="pet.image" [src]="pet.image" alt="{{ pet.name }}" />
+  </div>
+
+  <!-- <mat-card-content class="mt-2">
+    Nacimiento: {{ pet.birthDate | date : "dd/MM/yyyy" }}
+  </mat-card-content>
+  <mat-card-content>Años: {{ pet.age }}</mat-card-content>
+  <mat-card-content>
+    Castración: {{ pet.castration ? "Sí" : "No" }}
+  </mat-card-content>
+
+  <mat-card-content>
+    En el refugio desde: {{ pet.arrivalDate | date : "dd/MM/yyyy" }}
+  </mat-card-content>
+  <mat-card-content
+    >Desparasitado: {{ pet.dewormed ? "Sí" : "No" }}
+  </mat-card-content>
+  <mat-card-content>Salud: {{ pet.healthCondition }} </mat-card-content> -->
+  <mat-card-actions>
+    <button mat-button color="primary" [routerLink]="['/pets/edit', pet.id]">
+      Editar
+    </button>
+
+    <span class="spacer"></span>
+
+    <button mat-button color="primary" [routerLink]="['/pets/edit', pet.id]">
+      Ver
+    </button>
   </mat-card-actions>
 </mat-card>

@@ -10,5 +10,6 @@ export interface Pet {
   castration: boolean;
   birthDate: Date;
   vetVisitDate: Date;
+  image : string;
 
 }
