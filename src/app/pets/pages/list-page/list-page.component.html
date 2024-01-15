@@ -1,7 +1,8 @@
 <div class="container mt-2 d-flex">
-  <h1>En el refugio</h1>
-  <mat-divider></mat-divider>
-  <div class="grid bm-8 pt-2">
+  <div class="mx-4 p-3 text-center titlecontainer">
+    <h1><span>&#9790;</span> En el refugio actualmente <span>&#9789;</span></h1>
+  </div>
+  <div class="grid bm-8 pt-2 mt-4">
     <div *ngFor="let pet of pets" class="col-12 sm:col-4 md:col-3 xl:col-2">
       <pets-pet-card [pet]="pet"></pets-pet-card>
     </div>

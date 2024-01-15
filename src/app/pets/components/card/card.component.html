@@ -1,7 +1,7 @@
-<mat-card class="mx-3">
-  <mat-card-header class="text-center">
+<mat-card class="mx-3 p-2">
+  <mat-card-header class="titlecontainer">
     <!-- Aplicamos la clase text-center para centrar el contenido -->
-    <h2>{{ pet.name.toUpperCase() }}</h2>
+    <h2>{{ pet.name.toLowerCase() }}</h2>
   </mat-card-header>
   <div class="image-container">
     <img *ngIf="pet.image" [src]="pet.image" alt="{{ pet.name }}" />

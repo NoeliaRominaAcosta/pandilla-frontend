@@ -1,1 +1,76 @@
-<p>edit-page-component works!</p>
+<!-- id: number;
+name: string;
+age: string;
+arrivalDate: Date;
+adoptedDate: Date;
+healthCondition: string;
+adoptedBy: string;
+dewormed: boolean;
+castration: boolean;
+birthDate: Date;
+vetVisitDate: Date;
+image : string;
+ -->
+<mat-card class="custom-card p-4 mt-4">
+  <mat-card-header class="titlecontainer p-2 m-auto">
+    <mat-card-title><h1>Editar animal</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="center-form p-3 m-auto">
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput placeholder="Nombre" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Edad</mat-label>
+        <input type="number" matInput placeholder="Edad" [defaultValue]="0" />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Salud</mat-label>
+        <input type="text" matInput placeholder="Edad" />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Fecha ingreso</mat-label>
+        <input matInput type="date" required />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Cumpleaños</mat-label>
+        <input matInput type="date" required />
+      </mat-form-field>
+    </div>
+    <div class="form-field">
+      <mat-form-field>
+        <mat-label>Prox visita veterinaria</mat-label>
+        <input matInput type="date" required />
+      </mat-form-field>
+    </div>
+
+    <div class="col-12" style="display: flex; align-items: center">
+      <input type="checkbox" required />
+      <p style="margin-left: 5px; margin-bottom: 0">Vacunado</p>
+    </div>
+
+    <div class="col-12" style="display: flex; align-items: center">
+      <input type="checkbox" required />
+      <p style="margin-left: 5px; margin-bottom: 0">Desparacitado</p>
+    </div>
+
+    <div class="col-12" style="display: flex; align-items: center">
+      <input type="checkbox" required />
+      <p style="margin-left: 5px; margin-bottom: 0">Castrado</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="actions-container">
+    <button mat-button class="custom-button">Listo</button>
+    <button mat-button class="custom-button">Cancelar</button>
+  </mat-card-actions>
+</mat-card>
