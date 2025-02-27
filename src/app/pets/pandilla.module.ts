@@ -10,6 +10,7 @@ import { PandillaPageComponent } from './pages/pandilla-page/pandilla-page.compo
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardComponent } from './components/card/card.component';
 import { EditPageComponentComponent } from './pages/edit-page-component/edit-page-component.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,12 +22,14 @@ import { EditPageComponentComponent } from './pages/edit-page-component/edit-pag
     NewPageComponent,
     SearchPageComponent,
     CardComponent,
-    EditPageComponentComponent
+    EditPageComponentComponent,
+
   ],
   imports: [
     CommonModule,
    PandillaRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class PandillaModule { }

@@ -1,16 +1,3 @@
-<!-- id: number;
-name: string;
-age: string;
-arrivalDate: Date;
-adoptedDate: Date;
-healthCondition: string;
-adoptedBy: string;
-dewormed: boolean;
-castration: boolean;
-birthDate: Date;
-vetVisitDate: Date;
-image : string;
- -->
 <mat-card class="custom-card p-4 mt-4">
   <mat-card-header class="titlecontainer p-2 m-auto">
     <mat-card-title><h1>Editar animal</h1></mat-card-title>
@@ -71,6 +58,8 @@ image : string;
   </mat-card-content>
   <mat-card-actions class="actions-container">
     <button mat-button class="custom-button">Listo</button>
-    <button mat-button class="custom-button">Cancelar</button>
+    <button mat-button class="custom-button" [routerLink]="['/pets/list']">
+      Cancelar
+    </button>
   </mat-card-actions>
 </mat-card>

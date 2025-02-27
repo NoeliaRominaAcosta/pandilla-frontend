@@ -12,5 +12,13 @@ export class PetService {
   public listPets(): Observable<any[]> {
     return from(axios.get(this.baseUrl).then(response => response.data));
   }
+  public getPetById(id: number): Observable<any> {
+    return from(axios.get(`${this.baseUrl}/${id}`).then(response => response.data));
+  }
+
+
+  public deletePet(id: number): Observable<string> {
+    return from(axios.delete(`${this.baseUrl}/${id}`).then(response => response.data));
+  }
 
 }

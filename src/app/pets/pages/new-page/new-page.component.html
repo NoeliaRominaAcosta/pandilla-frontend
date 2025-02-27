@@ -5,7 +5,7 @@
 
 <mat-divider class="mb-2"></mat-divider>
 
-<div class="grid">
+<form class="grid" [formGroup]="petForm" (ngSubmit)="onSubmit()">
   <div class="col-12 sm:col-6">
     <mat-card>
       <mat-card-content>
@@ -72,22 +72,10 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <!-- id: number;
-name: string;
-age: string;
-arrivalDate: Date;
-adoptedDate: Date;
-healthCondition: string;
-adoptedBy: string;
-dewormed: boolean;
-castration: boolean;
-birthDate: Date;
-vetVisitDate: Date;
-image : string;
- -->
+
   <div class="col-12 sm:col-6">
     <mat-card>
-      <img src="" alt="imagen del héroe" mat-card-image />
+      <img src="" alt="imagen del pichicho" mat-card-image />
     </mat-card>
   </div>
-</div>
+</form>
